@@ -23,38 +23,3 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        btn = findViewById(R.id.btnCalcular);
-        btn.setOnClickListener(v->calcular());
-    }
-    private void calcular(){
-        tempVal = findViewById(R.id.txtNum1);
-        Double num1 = Double.parseDouble(tempVal.getText().toString());
-
-        tempVal = findViewById(R.id.txtNum2);
-        Double num2 = Double.parseDouble(tempVal.getText().toString());
-
-         double respuesta = 0;
-
-  spn = findViewById(R.id.cboOpciones);
-  switch (spn.getSelectedItemPosition()){
-      case 0: //suma
-           respuesta = num1 + num2;
-           break;
-
-      case 1: //resta
-          respuesta = num1 - num2;
-          break;
-
-      case 2: //multiplicar
-          respuesta = num1 * num2;
-          break;
-
-      case 3: //dividr
-          respuesta = num1 / num2;
-          break;
-  }
-
-        tempVal = findViewById(R.id.lblRespuesta);
-        tempVal.setText("Respuesta: "+ respuesta);
-    }
-}
