@@ -1,0 +1,145 @@
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:padding=\"20dp\"\r\n    android:background=\"#E3F2FD\">\r\n\r\n\r\n    <TextView\r\n        android:id=\"@+id/txtTitulo\"\r\n        android:text=\"CONVERSOR\"\r\n        android:textSize=\"22sp\"\r\n        android:textStyle=\"bold\"\r\n        android:textColor=\"#30628c\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_centerHorizontal=\"true\"\r\n        android:layout_marginTop=\"40dp\"/>\r\n\r\n\r\n    <TextView\r\n        android:id=\"@+id/lblTipo\"\r\n        android:text=\"Tipo:\"\r\n        android:textColor=\"#1565C0\"\r\n        android:textSize=\"16sp\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"100dp\"/>\r\n\r\n    <Spinner\r\n        android:id=\"@+id/spnTipo\"\r\n        android:entries=\"@array/tipo\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"120dp\"\r\n        android:background=\"#30628c\"/>\r\n\r\n\r\n    <TextView\r\n        android:id=\"@+id/lblDe\"\r\n        android:text=\"De:\"\r\n        android:textColor=\"#1565C0\"\r\n        android:textSize=\"16sp\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"180dp\"/>\r\n\r\n    <Spinner\r\n        android:id=\"@+id/spnDe\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"200dp\"\r\n        android:background=\"#30628c\"/>\r\n\r\n\r\n    <TextView\r\n        android:id=\"@+id/lblA\"\r\n        android:text=\"A:\"\r\n        android:textColor=\"#1565C0\"\r\n        android:textSize=\"16sp\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"260dp\"/>\r\n\r\n    <Spinner\r\n        android:id=\"@+id/spnA\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"280dp\"\r\n        android:background= \"#30628c\"/>\r\n\r\n\r\n    <EditText\r\n        android:id=\"@+id/txtCantidad\"\r\n        android:hint=\"Cantidad a convertir\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"340dp\"\r\n        android:inputType=\"numberDecimal\"\r\n        android:backgroundTint=\"#30628c\"/>\r\n\r\n\r\n    <TextView\r\n        android:id=\"@+id/lblRespuesta\"\r\n        android:text=\"Respuesta:\"\r\n        android:textSize=\"18sp\"\r\n        android:textStyle=\"bold\"\r\n        android:textColor=\"#30628c\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"400dp\"\r\n        android:layout_centerHorizontal=\"true\"/>\r\n\r\n    <Button\r\n        android:id=\"@+id/btnConvertir\"\r\n        android:text=\"CONVERTIR\"\r\n        android:textColor=\"#FFFFFF\"\r\n        android:textSize=\"18sp\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"450dp\"\r\n        android:background=\"#30628c\"/>\r\n\r\n</RelativeLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_main.xml b/app/src/main/res/layout/activity_main.xml
+--- a/app/src/main/res/layout/activity_main.xml	(revision 9ae496d40f250e111057a87e89c0ca28a7750fb7)
++++ b/app/src/main/res/layout/activity_main.xml	(date 1772725248558)
+@@ -6,99 +6,49 @@
+     android:background="#E3F2FD">
+ 
+ 
+-    <TextView
+-        android:id="@+id/txtTitulo"
+-        android:text="CONVERSOR"
+-        android:textSize="22sp"
+-        android:textStyle="bold"
+-        android:textColor="#30628c"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_centerHorizontal="true"
+-        android:layout_marginTop="40dp"/>
+-
++    <TabHost
++        android:layout_width="200dip"
++        android:layout_height="300dip">
+ 
+-    <TextView
+-        android:id="@+id/lblTipo"
+-        android:text="Tipo:"
+-        android:textColor="#1565C0"
+-        android:textSize="16sp"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginTop="100dp"/>
+-
+-    <Spinner
+-        android:id="@+id/spnTipo"
+-        android:entries="@array/tipo"
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:layout_marginTop="120dp"
+-        android:background="#30628c"/>
+-
++        <LinearLayout
++            android:layout_width="match_parent"
++            android:layout_height="match_parent"
++            android:orientation="vertical">
+ 
+-    <TextView
+-        android:id="@+id/lblDe"
+-        android:text="De:"
+-        android:textColor="#1565C0"
+-        android:textSize="16sp"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginTop="180dp"/>
+-
+-    <Spinner
+-        android:id="@+id/spnDe"
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:layout_marginTop="200dp"
+-        android:background="#30628c"/>
++            <TabWidget
++                android:id="@android:id/tabs"
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content" />
+ 
++            <FrameLayout
++                android:id="@android:id/tabcontent"
++                android:layout_width="match_parent"
++                android:layout_height="match_parent">
+ 
+-    <TextView
+-        android:id="@+id/lblA"
+-        android:text="A:"
+-        android:textColor="#1565C0"
+-        android:textSize="16sp"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginTop="260dp"/>
+-
+-    <Spinner
+-        android:id="@+id/spnA"
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:layout_marginTop="280dp"
+-        android:background= "#30628c"/>
++                <LinearLayout
++                    android:id="@+id/AGUA"
++                    android:layout_width="match_parent"
++                    android:layout_height="wrap_content"
++                    android:orientation="vertical">
+ 
++                </LinearLayout>
+ 
+-    <EditText
+-        android:id="@+id/txtCantidad"
+-        android:hint="Cantidad a convertir"
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:layout_marginTop="340dp"
+-        android:inputType="numberDecimal"
+-        android:backgroundTint="#30628c"/>
++                <LinearLayout
++                    android:id="@+id/AREA"
++                    android:layout_width="match_parent"
++                    android:layout_height="match_parent"
++                    android:orientation="vertical">
++
++                </LinearLayout>
+ 
++
++            </FrameLayout>
++        </LinearLayout>
++    </TabHost>
+ 
+     <TextView
+-        android:id="@+id/lblRespuesta"
+-        android:text="Respuesta:"
+-        android:textSize="18sp"
+-        android:textStyle="bold"
+-        android:textColor="#30628c"
++        android:id="@+id/txtMetroconsu"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:layout_marginTop="400dp"
+-        android:layout_centerHorizontal="true"/>
+-
+-    <Button
+-        android:id="@+id/btnConvertir"
+-        android:text="CONVERTIR"
+-        android:textColor="#FFFFFF"
+-        android:textSize="18sp"
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:layout_marginTop="450dp"
+-        android:background="#30628c"/>
+-
++        android:text="Metros consumidos" />
+ </RelativeLayout>
+\ No newline at end of file
