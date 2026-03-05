@@ -1,112 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:padding="20dp"
+    android:background="#E3F2FD">
 
 
-    <TabHost
-        android:id="@+id/conversores"
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:text="CONVERSOR"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#30628c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+
+
+    <TextView
+        android:id="@+id/lblTipo"
+        android:text="Tipo:"
+        android:textColor="#1565C0"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"/>
+
+    <Spinner
+        android:id="@+id/spnTipo"
+        android:entries="@array/tipo"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TabWidget
-                android:id="@android:id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <FrameLayout
-                android:id="@android:id/tabcontent"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <RelativeLayout
-                    android:id="@+id/tabMonedas"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:background="#30628c"/>
 
 
+    <TextView
+        android:id="@+id/lblDe"
+        android:text="De:"
+        android:textColor="#1565C0"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"/>
 
-                    <TextView
-                        android:id="@+id/lblMonedasDe"
-                        android:text="DE:"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"/>
+    <Spinner
+        android:id="@+id/spnDe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:background="#30628c"/>
 
-                    <Spinner
-                        android:id="@+id/spnMonedasDe"
-                        android:layout_marginLeft="40dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
 
-                    <TextView
-                        android:id="@+id/lblMonedasA"
-                        android:text="A:"
-                        android:layout_marginTop="80dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"/>
+    <TextView
+        android:id="@+id/lblA"
+        android:text="A:"
+        android:textColor="#1565C0"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="260dp"/>
 
-                    <Spinner
-                        android:id="@+id/spnMonedasA"
-                        android:layout_marginLeft="40dp"
-                        android:layout_marginTop="80dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+    <Spinner
+        android:id="@+id/spnA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        android:background= "#30628c"/>
 
-                    <EditText
-                        android:id="@+id/txtMonedasDe"
-                        android:layout_marginTop="120dp"
-                        android:hint="Cantidad a covertir"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
 
-                    <TextView
-                        android:id="@+id/MonedasRespuestas"
-                        android:layout_marginTop="180dp"
-                        android:layout_marginLeft="20dp"
-                        android:text="Respuesra:  ?"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"/>
-                    <Button
-                        android:id="@+id/btnMonedasConvertir"
-                        android:layout_marginTop="240dp"
-                        android:text="Convertir"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/txtCantidad"
+        android:hint="Cantidad a convertir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="340dp"
+        android:inputType="numberDecimal"
+        android:backgroundTint="#30628c"/>
 
-                </RelativeLayout>
 
-                <RelativeLayout
-                    android:id="@+id/tabLongitud"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+    <TextView
+        android:id="@+id/lblRespuesta"
+        android:text="Respuesta:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#30628c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:layout_centerHorizontal="true"/>
 
-                </RelativeLayout>
+    <Button
+        android:id="@+id/btnConvertir"
+        android:text="CONVERTIR"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="450dp"
+        android:background="#30628c"/>
 
-                <RelativeLayout
-                    android:id="@+id/tabVolumen"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                </RelativeLayout>
-            </FrameLayout>
-        </LinearLayout>
-    </TabHost>
 </RelativeLayout>
