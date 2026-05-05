@@ -14,6 +14,11 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -25,7 +30,7 @@
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/Samuel-Portillo-17/Prograll-Semi-2026.git",
-    "accountId": "8d487286-d4ef-402b-9a90-a102ce995147"
+    "accountId": "833c6537-b1ff-439d-ad44-9d7e106d89e2"
   }
 }]]></component>
   <component name="ProjectColorInfo">{
@@ -45,7 +50,7 @@
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Proyecto-final",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
