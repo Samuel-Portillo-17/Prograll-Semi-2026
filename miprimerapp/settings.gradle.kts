@@ -19,6 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "mi primer app"
+rootProject.name = "miPrimerApp"
 include(":app")
- 

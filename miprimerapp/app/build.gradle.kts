@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.miprimerapp"
-        minSdk = 23
+        minSdk = 26
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
@@ -33,6 +33,8 @@ android {
     }
 }
 
+
+
 dependencies {
     implementation(libs.appcompat)
     implementation(libs.material)
@@ -42,3 +44,4 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 }
+
